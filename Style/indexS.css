@@ -18,7 +18,7 @@ body{
   margin-right: 16px;
   font-size: 17px;
 }
-.add{
+#addbutton{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 30px;
     width: 150px;
