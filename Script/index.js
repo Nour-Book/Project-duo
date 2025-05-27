@@ -62,3 +62,4 @@ butt.onclick=change
         description : description
    }
    
+books.push(book)
