@@ -13,18 +13,18 @@ body{
 .search input[type=text] {
   float: right;
   padding: 6px;
-  border:#000;
+  border:#000000;
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
 }
-.add{
+#addbutton{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 30px;
     width: 150px;
     margin: 10px;
-    background-color: rgb(103, 226, 152);
+    background-color:rgb(138, 232, 197);
     border-radius:5px;
-    box-shadow: 0 0 0 2px #373539;
+    box-shadow: 0 0 0 2px #ffffff;
     transition: 0.7s;
 }
