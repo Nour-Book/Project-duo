@@ -65,7 +65,25 @@ body {
 
 
 
+.img{
+    width: 40%;
+    height: 40%;
+}
+.author{
+    color: rgb(49, 63, 25);
+}
 
+.price{
+    color: rgb(45, 54, 29);
+}
+
+.genre{
+    color: rgb(47, 58, 26);
+}
+
+.description{
+    color: rgb(44, 55, 27);
+}
 
 
 

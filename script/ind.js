@@ -38,3 +38,15 @@ function order () {
         cardsContainer.appendChild(card);
     });
 }
+var total = dataArr.reduce(function(acc,ele) {
+  console.log("boooooooooooo",typeof ele.price)
+            return (
+              
+                acc=acc + ele.price
+            );
+        },0);
+        console.log(total);
+        
+var tot = document.querySelector(".total")
+tot.innerText= total
+renderBooks()
