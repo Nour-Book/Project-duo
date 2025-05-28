@@ -1,5 +1,5 @@
 var mybooks=[
-    {
+    {   id:0,
         title:"Moonwalking with Einstein",
         img:"https://upload.wikimedia.org/wikipedia/en/5/59/Moonwalking_with_einstein.jpg",
         author:"Joshua Foer",
@@ -7,7 +7,7 @@ var mybooks=[
         genre:"Nonfiction",
         description:"The Art and Science of Remembering Everything"
     },
-    {
+    {   id:1,
         title:"Technique de Vente",
         img:"https://5livres.fr/wp-content/uploads/2019/08/Technique-de-Vente-Les-Strategies-Gagnantes-Etape-par-Etape.jpg",
         author:"Victor Cabrera",
@@ -15,7 +15,7 @@ var mybooks=[
         genre:"commerce",
         description:"Les Strategies Gagnantes Etape par Etape"
     },
-    {
+    {   id:2,
         title:"Psycho-Cybernétique",
         img:"https://tse3.mm.bing.net/th?id=OIP.58Mp400VL4YwLT7hIZz3vwHaLm&pid=Api&P=0&h=180",
         author:"Maxwell Maltz",
@@ -23,7 +23,7 @@ var mybooks=[
         genre:"Nonfiction",
         description:"Dominez ce Pouvoir Interne qui peut changer votre vie pour toujours"
     },
-    {
+    {   id:3,
         title:"Pistachio Theory",
         img:"https://www.noor-book.com/publice/covers_cache_webp/6/e/b/6/9f2c45ff22eb6c827113e74bba35b0e3.png.webp",
         author:"Fahad Amer AlAhmadi",
@@ -58,7 +58,7 @@ function change () {
 
 // load books from local storage
 var books = JSON.parse(localStorage.getItem('books')) || [
-        {
+        {   id:1,
         title:"Moonwalking with Einstein",
         img:"https://upload.wikimedia.org/wikipedia/en/5/59/Moonwalking_with_einstein.jpg",
         author:"Joshua Foer",
@@ -66,7 +66,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         genre:"Nonfiction",
         description:"The Art and Science of Remembering Everything"
     },
-    {
+    {   id:2,
         title:"Technique de Vente",
         img:"https://5livres.fr/wp-content/uploads/2019/08/Technique-de-Vente-Les-Strategies-Gagnantes-Etape-par-Etape.jpg",
         author:"Victor Cabrera",
@@ -74,7 +74,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         genre:"commerce",
         description:"Les Strategies Gagnantes Etape par Etape"
     },
-    {
+    {   id:3,
         title:"Psycho-Cybernétique",
         img:"https://tse3.mm.bing.net/th?id=OIP.58Mp400VL4YwLT7hIZz3vwHaLm&pid=Api&P=0&h=180",
         author:"Maxwell Maltz",
@@ -82,7 +82,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         genre:"Nonfiction",
         description:"Dominez ce Pouvoir Interne qui peut changer votre vie pour toujours"
     },
-    {
+    {   id:4,
         title:"Pistachio Theory",
         img:"https://www.noor-book.com/publice/covers_cache_webp/6/e/b/6/9f2c45ff22eb6c827113e74bba35b0e3.png.webp",
         author:"Fahad Amer AlAhmadi",
@@ -98,6 +98,7 @@ var urlParams = new URLSearchParams(window.location.search);
 console.log("URL Params:", urlParams.toString());
 if (urlParams.has('title_book')) {
     var newBook = {
+        id:mybooks[mybooks.length-1].id+1,
         title: urlParams.get("title_book"),
         img: urlParams.get("img"),
         author: urlParams.get("author"),
@@ -127,6 +128,8 @@ function renderBooks(b=mybooks) {
     // appending cards to the ui 
     b.forEach(function(book) {
         var card = document.createElement('div');
+                card.id =book.id
+
         card.className = 'card';
         card.innerHTML = `
             <h2>${book.title}</h2>
@@ -199,4 +202,25 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 console.log("All Books:", books);
 });
-
+var newArr=[]
+localStorage.setItem("basket",JSON.stringify([]))
+document.addEventListener('DOMContentLoaded',function (params) {
+    
+    var basketbtn=document.getElementsByClassName("btn_basket")
+    //   console.log( "basketbtn",basketbtn);
+      for (let index = 0; index < basketbtn.length; index++) {
+        // console.log("element");
+        
+        const element = basketbtn[index];
+           element.addEventListener("click",function(){
+        var x = element.parentElement.parentElement.id
+       console.log("xxxxxxxx",x);
+        newArr.push(mybooks[x])
+        var dataArr=JSON.parse(localStorage.getItem("basket"))  
+        localStorage.setItem("basket",JSON.stringify(newArr))
+        }
+        )
+        
+      }
+})
+ 
