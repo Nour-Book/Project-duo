@@ -30,24 +30,6 @@ body {
 }
 
 
-.img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.card h2 {
-  font-size: 18px;
-  margin: 15px 0 10px;
-  color: #333;
-}
-
-.content .price {
-  font-size: 16px;
-  font-weight: bold;
-  color: green;
-}
-
 .totals {
   background-color: #fff;
   padding:1rem;
