@@ -232,7 +232,7 @@ var Nonfiction=document.querySelector("#Nonfiction")
                 book.genre.toLowerCase()==="nonfiction"
             );
         });
-        renderFilteredBooks(filternonfiction);
+        renderBooks(filternonfiction);
     });
     var Nonfiction=document.querySelector("#Commerce")
     
@@ -242,7 +242,7 @@ var Nonfiction=document.querySelector("#Nonfiction")
                 book.genre.toLowerCase()==="commerce"
             );
         });
-        renderFilteredBooks(filtercommerce);
+        renderBooks(filtercommerce);
     });
     var Nonfiction=document.querySelector("#Science")
     
@@ -252,5 +252,5 @@ var Nonfiction=document.querySelector("#Nonfiction")
                 book.genre.toLowerCase()==="science"
             );
         });
-        renderFilteredBooks(filterscience);
+        renderBooks(filterscience);
     });
