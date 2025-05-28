@@ -197,7 +197,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('addbutton').onclick = function() {
         window.location.href = "add.html";
     };
-// console.log("All Books:", books);
+     document.getElementById('basketButton').onclick = function() {
+        window.location.href = "Basket.html";
+    };
+console.log("All Books:", books);
 });
 var newArr=[]
 localStorage.setItem("basket",JSON.stringify([]))
