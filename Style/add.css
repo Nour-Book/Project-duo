@@ -2,3 +2,13 @@
     margin: auto;
     padding: 50px;
 }
+.btn_add{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+    width: 150px;
+    margin: 10px;
+    background-color: rgb(103, 226, 152);
+    border-radius:5px;
+    box-shadow: 0 0 0 2px #373539;
+    transition: 0.7s;
+}
