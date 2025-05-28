@@ -36,6 +36,16 @@ body {
     box-shadow: 0 0 0 2px #ffffff;
     transition: 0.7s;
 }
+#basketButton{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+    width: 150px;
+    margin: 10px;
+    background-color:rgb(138, 232, 197);
+    border-radius:5px;
+    box-shadow: 0 0 0 2px #ffffff;
+    transition: 0.7s;
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -87,3 +97,23 @@ body {
 .description_b{
     color: black;
 } 
+.btn_basket {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transform: scale(0.5);
+  transition:all 0.5 ease;
+}
+.btn_basket img {
+width: 40px;
+height: 40px;
+}
+
+/* Darker background on mouse-over */
+.btn_basket:hover {
+  background-color: RoyalBlue;
+   transform: scale(1);
+}
