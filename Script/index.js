@@ -12,7 +12,7 @@ var mybooks=[
         img:"https://5livres.fr/wp-content/uploads/2019/08/Technique-de-Vente-Les-Strategies-Gagnantes-Etape-par-Etape.jpg",
         author:"Victor Cabrera",
         price:"22DT",
-        genre:"",
+        genre:"commerce",
         description:"Les Strategies Gagnantes Etape par Etape"
     },
     {
@@ -20,7 +20,7 @@ var mybooks=[
         img:"https://tse3.mm.bing.net/th?id=OIP.58Mp400VL4YwLT7hIZz3vwHaLm&pid=Api&P=0&h=180",
         author:"Maxwell Maltz",
         price:"55DT",
-        genre:"",
+        genre:"Nonfiction",
         description:"Dominez ce Pouvoir Interne qui peut changer votre vie pour toujours"
     },
     {
@@ -29,7 +29,7 @@ var mybooks=[
         author:"Fahad Amer AlAhmadi",
         price:"25DT",
         genre:"Human Development And Self-development",
-        description:"The Pistachio Theory book is one of the books on human development and self-development."
+        description:"The Pistachio Theory book is one of the books on human development"
     }
 
 ]
@@ -71,7 +71,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         img:"https://5livres.fr/wp-content/uploads/2019/08/Technique-de-Vente-Les-Strategies-Gagnantes-Etape-par-Etape.jpg",
         author:"Victor Cabrera",
         price:"22DT",
-        genre:"",
+        genre:"commerce",
         description:"Les Strategies Gagnantes Etape par Etape"
     },
     {
@@ -79,7 +79,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         img:"https://tse3.mm.bing.net/th?id=OIP.58Mp400VL4YwLT7hIZz3vwHaLm&pid=Api&P=0&h=180",
         author:"Maxwell Maltz",
         price:"55DT",
-        genre:"",
+        genre:"Nonfiction",
         description:"Dominez ce Pouvoir Interne qui peut changer votre vie pour toujours"
     },
     {
@@ -88,7 +88,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         author:"Fahad Amer AlAhmadi",
         price:"25DT",
         genre:"Human Development And Self-development",
-        description:"The Pistachio Theory book is one of the books on human development and self-development."
+        description:"The Pistachio Theory book is one of the books on human development"
     }
 
 ];
@@ -148,7 +148,7 @@ function checkSearch() {
     
     searchInput.addEventListener('input', function() {
         var searchTerm = this.value.toLowerCase().trim();
-        var filteredBooks = books.filter(function(book) {
+        var filteredBooks = mybooks.filter(function(book) {
             return (
                 book.title.toLowerCase().includes(searchTerm) ||
                 book.author.toLowerCase().includes(searchTerm) ||
@@ -169,18 +169,19 @@ function renderFilteredBooks(filteredBooks) {
         return;
     }
     
-    filteredBooks.forEach(book => {
+    filteredBooks.forEach(function(book) {
         var card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <h2>${book.title}</h2>
+             <h2>${book.title}</h2>
             <img class="img" src="${book.img}" alt="${book.title}">
             <div class="content">
-                <p class="author">Author: <span>${book.author}</span></p>
-                <p class="price">Price: <span>${book.price}</span></p>
-                <p class="genre">Genre: <span>${book.genre}</span></p>
-                <p class="description">Description: <span>${book.description}</span></p>
-                            </div>
+                <p>Author: <span>${book.author}</span></p>
+                <p>Price: <span>${book.price}</span></p>
+                <p>Genre: <span>${book.genre}</span></p>
+                <p>Description: <span>${book.description}</span></p>
+                  <button class="btn_basket"><img src="../media/basket.png"></button>
+            </div>
         `;
         cardsContainer.appendChild(card);
     });
