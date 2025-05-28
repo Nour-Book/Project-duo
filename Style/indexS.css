@@ -70,33 +70,25 @@ body {
    padding: 0.2rem;
 }
 .img{
-    width: 60%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
 }
 .author{
-    color: darkolivegreen;
+    color: rgb(49, 63, 25);
 }
-.name-author{
-    color: black;
-}
+
 .price{
-    color: darkolivegreen;
+    color: rgb(45, 54, 29);
 }
-.price_b{
-    color: black;
-}
+
 .genre{
-    color: darkolivegreen;
+    color: rgb(47, 58, 26);
 }
-.genre_b{
-    color: black;
-}
+
 .description{
-    color: darkolivegreen;
+    color: rgb(44, 55, 27);
 }
-.description_b{
-    color: black;
-} 
+
 .btn_basket {
   background-color: DodgerBlue;
   border: none;
