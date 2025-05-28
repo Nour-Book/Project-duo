@@ -8,7 +8,18 @@ function order () {
     window.location.href ="./indexH.html"
   };
   buttorder.onclick=order
- // appending cards to the ui 
+
+  function renderBooks(b=dataArr) {
+    var cardsContainer = document.querySelector('.cards');
+    cardsContainer.innerHTML = '';
+    
+    if (b.length === 0) {
+        cardsContainer.innerHTML = '<p>No books found. Add your first book!</p>';
+        return;
+    }
+    console.log(b,'b');
+    
+    // appending cards to the ui 
     b.forEach(function(book) {
         var card = document.createElement('div');
                 card.id =book.id
@@ -26,10 +37,16 @@ function order () {
         `;
         cardsContainer.appendChild(card);
     });
-var total = da.reduce(function(book,acc) {
+}
+var total = dataArr.reduce(function(acc,ele) {
+  console.log("boooooooooooo",typeof ele.price)
             return (
-                acc=acc + book.price
+              
+                acc=acc + ele.price
             );
         },0);
+        console.log(total);
+        
 var tot = document.querySelector(".total")
 tot.innerText= total
+renderBooks()

@@ -30,24 +30,6 @@ body {
 }
 
 
-.img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.card h2 {
-  font-size: 18px;
-  margin: 15px 0 10px;
-  color: #333;
-}
-
-.content .price {
-  font-size: 16px;
-  font-weight: bold;
-  color: green;
-}
-
 .totals {
   background-color: #fff;
   padding:1rem;
@@ -83,7 +65,25 @@ body {
 
 
 
+.img{
+    width: 40%;
+    height: 40%;
+}
+.author{
+    color: rgb(49, 63, 25);
+}
 
+.price{
+    color: rgb(45, 54, 29);
+}
+
+.genre{
+    color: rgb(47, 58, 26);
+}
+
+.description{
+    color: rgb(44, 55, 27);
+}
 
 
 

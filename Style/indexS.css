@@ -109,3 +109,33 @@ height: 40px;
   background-color: RoyalBlue;
    transform: scale(1);
 }
+#Nonfiction{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+    width: 150px;
+    margin: 10px;
+    background-color:rgb(152, 214, 243);
+    border-radius:5px;
+    box-shadow: 0 0 0 2px #ffffff;
+    transition: 0.7s;
+}
+#Commerce{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+    width: 150px;
+    margin: 10px;
+    background-color:rgb(152, 214, 243);
+    border-radius:5px;
+    box-shadow: 0 0 0 2px #ffffff;
+    transition: 0.7s;
+}
+#Science{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+    width: 150px;
+    margin: 10px;
+    background-color:rgb(152, 214, 243);
+    border-radius:5px;
+    box-shadow: 0 0 0 2px #ffffff;
+    transition: 0.7s;
+}

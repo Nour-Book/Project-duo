@@ -1,0 +1,42 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+/* .cards{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 3rem;
+    flex-wrap: wrap;
+} */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: auto;
+  min-width: 30%;
+   padding: 0.2rem;
+}
+.img{
+    width: 40%;
+    height: 40%;
+}
+.author{
+    color: rgb(49, 63, 25);
+}
+
+.price{
+    color: rgb(45, 54, 29);
+}
+
+.genre{
+    color: rgb(47, 58, 26);
+}
+
+.description{
+    color: rgb(44, 55, 27);
+}

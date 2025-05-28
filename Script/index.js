@@ -3,7 +3,7 @@ var mybooks=[
         title:"Moonwalking with Einstein",
         img:"https://upload.wikimedia.org/wikipedia/en/5/59/Moonwalking_with_einstein.jpg",
         author:"Joshua Foer",
-        price:"50DT",
+        price:50,
         genre:"Nonfiction",
         description:"The Art and Science of Remembering Everything"
     },
@@ -11,7 +11,7 @@ var mybooks=[
         title:"Technique de Vente",
         img:"https://5livres.fr/wp-content/uploads/2019/08/Technique-de-Vente-Les-Strategies-Gagnantes-Etape-par-Etape.jpg",
         author:"Victor Cabrera",
-        price:"22DT",
+        price:22,
         genre:"commerce",
         description:"Les Strategies Gagnantes Etape par Etape"
     },
@@ -19,7 +19,7 @@ var mybooks=[
         title:"Psycho-Cybernétique",
         img:"https://tse3.mm.bing.net/th?id=OIP.58Mp400VL4YwLT7hIZz3vwHaLm&pid=Api&P=0&h=180",
         author:"Maxwell Maltz",
-        price:"55DT",
+        price:55,
         genre:"Nonfiction",
         description:"Dominez ce Pouvoir Interne qui peut changer votre vie pour toujours"
     },
@@ -27,7 +27,7 @@ var mybooks=[
         title:"Pistachio Theory",
         img:"https://www.noor-book.com/publice/covers_cache_webp/6/e/b/6/9f2c45ff22eb6c827113e74bba35b0e3.png.webp",
         author:"Fahad Amer AlAhmadi",
-        price:"25DT",
+        price:25,
         genre:"Human Development And Self-development",
         description:"The Pistachio Theory book is one of the books on human development"
     }
@@ -62,7 +62,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         title:"Moonwalking with Einstein",
         img:"https://upload.wikimedia.org/wikipedia/en/5/59/Moonwalking_with_einstein.jpg",
         author:"Joshua Foer",
-        price:"50DT",
+        price:50,
         genre:"Nonfiction",
         description:"The Art and Science of Remembering Everything"
     },
@@ -70,7 +70,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         title:"Technique de Vente",
         img:"https://5livres.fr/wp-content/uploads/2019/08/Technique-de-Vente-Les-Strategies-Gagnantes-Etape-par-Etape.jpg",
         author:"Victor Cabrera",
-        price:"22DT",
+        price:22,
         genre:"commerce",
         description:"Les Strategies Gagnantes Etape par Etape"
     },
@@ -78,7 +78,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         title:"Psycho-Cybernétique",
         img:"https://tse3.mm.bing.net/th?id=OIP.58Mp400VL4YwLT7hIZz3vwHaLm&pid=Api&P=0&h=180",
         author:"Maxwell Maltz",
-        price:"55DT",
+        price:55,
         genre:"Nonfiction",
         description:"Dominez ce Pouvoir Interne qui peut changer votre vie pour toujours"
     },
@@ -86,7 +86,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         title:"Pistachio Theory",
         img:"https://www.noor-book.com/publice/covers_cache_webp/6/e/b/6/9f2c45ff22eb6c827113e74bba35b0e3.png.webp",
         author:"Fahad Amer AlAhmadi",
-        price:"25DT",
+        price:25 ,
         genre:"Human Development And Self-development",
         description:"The Pistachio Theory book is one of the books on human development"
     }
@@ -224,3 +224,33 @@ document.addEventListener('DOMContentLoaded',function (params) {
       }
 })
  
+var Nonfiction=document.querySelector("#Nonfiction")
+    
+    Nonfiction.addEventListener("click", function() {
+        var filternonfiction = mybooks.filter(function(book) {
+            return (
+                book.genre.toLowerCase()==="nonfiction"
+            );
+        });
+        renderBooks(filternonfiction);
+    });
+    var Nonfiction=document.querySelector("#Commerce")
+    
+    Nonfiction.addEventListener("click", function() {
+        var filtercommerce = mybooks.filter(function(book) {
+            return (
+                book.genre.toLowerCase()==="commerce"
+            );
+        });
+        renderBooks(filtercommerce);
+    });
+    var Nonfiction=document.querySelector("#Science")
+    
+    Nonfiction.addEventListener("click", function() {
+        var filterscience = mybooks.filter(function(book) {
+            return (
+                book.genre.toLowerCase()==="science"
+            );
+        });
+        renderBooks(filterscience);
+    });
