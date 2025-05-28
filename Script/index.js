@@ -224,3 +224,33 @@ document.addEventListener('DOMContentLoaded',function (params) {
       }
 })
  
+var Nonfiction=document.querySelector("#Nonfiction")
+    
+    Nonfiction.addEventListener("click", function() {
+        var filternonfiction = mybooks.filter(function(book) {
+            return (
+                book.genre.toLowerCase()==="nonfiction"
+            );
+        });
+        renderBooks(filternonfiction);
+    });
+    var Nonfiction=document.querySelector("#Commerce")
+    
+    Nonfiction.addEventListener("click", function() {
+        var filtercommerce = mybooks.filter(function(book) {
+            return (
+                book.genre.toLowerCase()==="commerce"
+            );
+        });
+        renderBooks(filtercommerce);
+    });
+    var Nonfiction=document.querySelector("#Science")
+    
+    Nonfiction.addEventListener("click", function() {
+        var filterscience = mybooks.filter(function(book) {
+            return (
+                book.genre.toLowerCase()==="science"
+            );
+        });
+        renderBooks(filterscience);
+    });
