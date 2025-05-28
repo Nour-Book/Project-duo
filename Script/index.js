@@ -12,7 +12,7 @@ var mybooks=[
         img:"https://5livres.fr/wp-content/uploads/2019/08/Technique-de-Vente-Les-Strategies-Gagnantes-Etape-par-Etape.jpg",
         author:"Victor Cabrera",
         price:"22DT",
-        genre:"",
+        genre:"Commerce",
         description:"Les Strategies Gagnantes Etape par Etape"
     },
     {
@@ -20,7 +20,7 @@ var mybooks=[
         img:"https://tse3.mm.bing.net/th?id=OIP.58Mp400VL4YwLT7hIZz3vwHaLm&pid=Api&P=0&h=180",
         author:"Maxwell Maltz",
         price:"55DT",
-        genre:"",
+        genre:"Nonfiction",
         description:"Dominez ce Pouvoir Interne qui peut changer votre vie pour toujours"
     },
     {
@@ -71,7 +71,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         img:"https://5livres.fr/wp-content/uploads/2019/08/Technique-de-Vente-Les-Strategies-Gagnantes-Etape-par-Etape.jpg",
         author:"Victor Cabrera",
         price:"22DT",
-        genre:"",
+        genre:"Commerce",
         description:"Les Strategies Gagnantes Etape par Etape"
     },
     {
@@ -79,7 +79,7 @@ var books = JSON.parse(localStorage.getItem('books')) || [
         img:"https://tse3.mm.bing.net/th?id=OIP.58Mp400VL4YwLT7hIZz3vwHaLm&pid=Api&P=0&h=180",
         author:"Maxwell Maltz",
         price:"55DT",
-        genre:"",
+        genre:"Nonfiction",
         description:"Dominez ce Pouvoir Interne qui peut changer votre vie pour toujours"
     },
     {
@@ -148,7 +148,7 @@ function checkSearch() {
     
     searchInput.addEventListener('input', function() {
         var searchTerm = this.value.toLowerCase().trim();
-        var filteredBooks = books.filter(function(book) {
+        var filteredBooks = mybooks.filter(function(book) {
             return (
                 book.title.toLowerCase().includes(searchTerm) ||
                 book.author.toLowerCase().includes(searchTerm) ||
@@ -169,7 +169,7 @@ function renderFilteredBooks(filteredBooks) {
         return;
     }
     
-    filteredBooks.forEach(book => {
+    filteredBooks.forEach(function(book) {
         var card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
@@ -192,6 +192,9 @@ document.addEventListener('DOMContentLoaded', function() {
     checkSearch();
     document.getElementById('addbutton').onclick = function() {
         window.location.href = "add.html";
+    };
+     document.getElementById('basketButton').onclick = function() {
+        window.location.href = "Basket.html";
     };
 console.log("All Books:", books);
 });
