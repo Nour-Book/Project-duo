@@ -1,15 +1,23 @@
-body{
-    margin: 0!important;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
 }
-.nav_bar{
-    display: flex;
-    flex-direction: row;
-    height: 50px;
-    justify-content: space-between;
-    box-shadow: 0px 0px 10px #000;
-    padding: 10px;
-    margin-bottom: 10%;
+
+ .nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0px 0px 10px #000;
+  background-color: #deffd5;
+  color: rgb(255, 255, 255);
 }
+.nav_bar img {
+  height: 50px;
+}
+
 .search input[type=text] {
   float: right;
   padding: 6px;
@@ -23,7 +31,7 @@ body{
     height: 30px;
     width: 150px;
     margin: 10px;
-    background-color:rgb(138, 232, 197);
+    background-color:rgb(210, 252, 172);
     border-radius:5px;
     box-shadow: 0 0 0 2px #ffffff;
     transition: 0.7s;
@@ -37,4 +45,75 @@ body{
     border-radius:5px;
     box-shadow: 0 0 0 2px #ffffff;
     transition: 0.7s;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+/* .cards{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 3rem;
+    flex-wrap: wrap;
+} */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: auto;
+  min-width: 30%;
+   padding: 0.2rem;
+}
+.img{
+    width: 60%;
+    height: 50%;
+}
+.author{
+    color: darkolivegreen;
+}
+.name-author{
+    color: black;
+}
+.price{
+    color: darkolivegreen;
+}
+.price-{
+    color: black;
+}
+.genre{
+    color: darkolivegreen;
+}
+.genre-{
+    color: black;
+}
+.description{
+    color: darkolivegreen;
+}
+.description_b{
+    color: black;
+} 
+.btn_basket {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transform: scale(0.5);
+  transition:all 0.5 ease;
+}
+.btn_basket img {
+width: 40px;
+height: 40px;
+}
+
+/* Darker background on mouse-over */
+.btn_basket:hover {
+  background-color: RoyalBlue;
+   transform: scale(1);
 }
