@@ -35,11 +35,25 @@ var mybooks=[
 ]
    var butt = document.getElementById('addbutton');
 console.log(butt,'buu');
-function change () {
+function add () {
     console.log("hh")
     window.location.href ="add.html"
   };
-butt.onclick=change
+butt.onclick=add
+
+
+var buttBsk = document.getElementById('basketButton');
+
+console.log(butt,'buu');
+function change () {
+    console.log("hh")
+    window.location.href ="Basket.html"
+  };
+  buttBsk.onclick=change
+  
+
+
+
 
 
 // load books from local storage
@@ -122,6 +136,7 @@ function renderBooks(b=mybooks) {
                 <p>Price: <span>${book.price}</span></p>
                 <p>Genre: <span>${book.genre}</span></p>
                 <p>Description: <span>${book.description}</span></p>
+                  <button class="btn_basket"><img src="../media/basket.png"></button>
             </div>
         `;
         cardsContainer.appendChild(card);
