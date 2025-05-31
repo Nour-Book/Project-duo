@@ -107,7 +107,8 @@ if (urlParams.has('title_book')) {
         description: urlParams.get("description")
     };
     
-    mybooks.push(newBook);
+    mybooks.unshift(newBook);
+    renderBooks(mybooks)
     localStorage.setItem('books', JSON.stringify(books));
     
     // clear URL params after processing
